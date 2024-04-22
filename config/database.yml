@@ -85,6 +85,7 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV["DATABASE_URL"] %>
   database: testapi1_production
-  username: testapi1
-  password: <%= ENV["TESTAPI1_DATABASE_PASSWORD"] %>
+  username: postgres
+  password: <%= ENV["RAIL_UPLOAD_DATABASE_PASSWORD"] %>
